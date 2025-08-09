@@ -237,9 +237,7 @@ function generateFallbackRoadmap($major) {
                             <p><strong>Toán:</strong> <?php echo $profile['math_score'] ?? 'N/A'; ?></p>
                             <p><strong>Văn:</strong> <?php echo $profile['literature_score'] ?? 'N/A'; ?></p>
                             <p><strong>Anh:</strong> <?php echo $profile['english_score'] ?? 'N/A'; ?></p>
-                            <p><strong>Lý:</strong> <?php echo $profile['physics_score'] ?? 'N/A'; ?></p>
-                            <p><strong>Hóa:</strong> <?php echo $profile['chemistry_score'] ?? 'N/A'; ?></p>
-                            <p><strong>Sinh:</strong> <?php echo $profile['biology_score'] ?? 'N/A'; ?></p>
+                            
                         </div>
                     </div>
                 </div>

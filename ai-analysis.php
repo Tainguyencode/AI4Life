@@ -21,9 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'math_score' => sanitizeInput($_POST['math_score'] ?? ''),
         'literature_score' => sanitizeInput($_POST['literature_score'] ?? ''),
         'english_score' => sanitizeInput($_POST['english_score'] ?? ''),
-        'physics_score' => sanitizeInput($_POST['physics_score'] ?? ''),
-        'chemistry_score' => sanitizeInput($_POST['chemistry_score'] ?? ''),
-        'biology_score' => sanitizeInput($_POST['biology_score'] ?? ''),
         'favorite_subject' => sanitizeInput($_POST['favorite_subject'] ?? ''),
         'career_orientation' => sanitizeInput($_POST['career_orientation'] ?? ''),
         'habits' => sanitizeInput($_POST['habits'] ?? ''),
@@ -264,24 +261,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                    placeholder="0-10">
                         </div>
-                        <div>
-                            <label class="block text-gray-700 mb-2">Lý</label>
-                            <input type="number" name="physics_score" min="0" max="10" step="0.1" required
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                   placeholder="0-10">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 mb-2">Hóa</label>
-                            <input type="number" name="chemistry_score" min="0" max="10" step="0.1" required
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                   placeholder="0-10">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 mb-2">Sinh</label>
-                            <input type="number" name="biology_score" min="0" max="10" step="0.1" required
-                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                   placeholder="0-10">
-                        </div>
                     </div>
                 </div>
 
@@ -293,7 +272,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </label>
                         <input type="text" name="favorite_subject" required
                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                               placeholder="Ví dụ: Toán, Văn, Lý, Hóa, Sinh, Anh...">
+                               placeholder="Ví dụ: Toán, Văn, Anh...">
                     </div>
                     
                     <div>

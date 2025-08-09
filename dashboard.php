@@ -78,7 +78,7 @@ $stats = getProfileStats($user['id']);
         </div>
 
         <!-- Quick Actions -->
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="grid md:grid-cols-5 gap-6 mb-8">
             <div class="bg-white rounded-lg shadow-md p-6">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-user-edit text-blue-600 text-2xl mr-3"></i>
@@ -134,14 +134,27 @@ $stats = getProfileStats($user['id']);
             </a>
         </div>
 
+
+
             <div class="bg-white rounded-lg shadow-md p-6">
                 <div class="flex items-center mb-4">
-                    <i class="fas fa-lock text-red-600 text-2xl mr-3"></i>
-                    <h3 class="text-xl font-bold text-gray-800">Đổi mật khẩu</h3>
+                    <i class="fas fa-chart-bar text-indigo-600 text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">Thống kê ngành học</h3>
                 </div>
-                <p class="text-gray-600 mb-4">Thay đổi mật khẩu để bảo mật tài khoản</p>
-                <a href="change-password.php" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors inline-block">
-                    <i class="fas fa-key mr-2"></i>Đổi mật khẩu
+                <p class="text-gray-600 mb-4">Xem thống kê ngành học được quan tâm</p>
+                <a href="major-statistics.php" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors inline-block">
+                    <i class="fas fa-chart-bar mr-2"></i>Xem thống kê
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-crystal-ball text-orange-600 text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">Dự đoán ngành học hot</h3>
+                </div>
+                <p class="text-gray-600 mb-4">Xem dự đoán ngành học hot trong 3-5 năm tới</p>
+                <a href="future-majors-short.php" class="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 transition-colors inline-block">
+                    <i class="fas fa-crystal-ball mr-2"></i>Xem dự đoán
                 </a>
             </div>
         </div>

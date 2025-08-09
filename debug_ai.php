@@ -23,9 +23,7 @@ if ($result['success']) {
         'math_score' => '8',
         'literature_score' => '7',
         'english_score' => '8',
-        'physics_score' => '8',
-        'chemistry_score' => '7',
-        'biology_score' => '7',
+        
         'favorite_subject' => 'Toán',
         'career_orientation' => 'Lập trình viên',
         'habits' => 'Thích máy tính',

@@ -8,9 +8,7 @@ $testData = [
     'math_score' => '8.5',
     'literature_score' => '7.0',
     'english_score' => '8.0',
-    'physics_score' => '8.0',
-    'chemistry_score' => '7.5',
-    'biology_score' => '7.0',
+
     'favorite_subject' => 'Toán',
     'career_orientation' => 'Lập trình viên',
     'habits' => 'Thích chơi game, đọc sách công nghệ',

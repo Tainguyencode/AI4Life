@@ -39,8 +39,8 @@ $techScore = (int)($profile['tech_interest'] ?? 5);
 $creativityScore = (int)($profile['creativity'] ?? 5);
 $communicationScore = (int)($profile['communication'] ?? 5);
 
-// Tính điểm trung bình các môn học
-$subjects = ['math_score', 'literature_score', 'english_score', 'physics_score', 'chemistry_score', 'biology_score'];
+            // Tính điểm trung bình các môn học
+            $subjects = ['math_score', 'literature_score', 'english_score'];
 $totalScore = 0;
 $validSubjects = 0;
 foreach ($subjects as $subject) {
@@ -245,14 +245,11 @@ $radarData = [
             </h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <?php
-                $subjects = [
-                    'math_score' => ['Toán học', 'fas fa-square-root-alt', 'blue'],
-                    'literature_score' => ['Văn học', 'fas fa-book-open', 'green'],
-                    'english_score' => ['Tiếng Anh', 'fas fa-language', 'purple'],
-                    'physics_score' => ['Vật lý', 'fas fa-atom', 'red'],
-                    'chemistry_score' => ['Hóa học', 'fas fa-flask', 'yellow'],
-                    'biology_score' => ['Sinh học', 'fas fa-leaf', 'emerald']
-                ];
+                                            $subjects = [
+                                'math_score' => ['Toán học', 'fas fa-square-root-alt', 'blue'],
+                                'literature_score' => ['Văn học', 'fas fa-book-open', 'green'],
+                                'english_score' => ['Tiếng Anh', 'fas fa-language', 'purple']
+                            ];
                 
                 foreach ($subjects as $key => $subject):
                     $score = (float)($profile[$key] ?? 0);

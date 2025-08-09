@@ -37,9 +37,6 @@ CREATE TABLE IF NOT EXISTS student_profiles (
     math_score DECIMAL(3,1),
     literature_score DECIMAL(3,1),
     english_score DECIMAL(3,1),
-    physics_score DECIMAL(3,1),
-    chemistry_score DECIMAL(3,1),
-    biology_score DECIMAL(3,1),
     favorite_subject VARCHAR(100),
     career_orientation VARCHAR(255),
     habits TEXT,
@@ -98,6 +95,15 @@ try {
     
     // Tạo bảng ai_learning_roadmaps
     $pdo->exec($createAILearningRoadmapsTable);
+    
+    // Xóa các cột cũ nếu tồn tại (để tương thích với phiên bản mới)
+    try {
+        $pdo->exec("ALTER TABLE student_profiles DROP COLUMN IF EXISTS physics_score");
+        $pdo->exec("ALTER TABLE student_profiles DROP COLUMN IF EXISTS chemistry_score");
+        $pdo->exec("ALTER TABLE student_profiles DROP COLUMN IF EXISTS biology_score");
+    } catch(PDOException $e) {
+        // Bỏ qua lỗi nếu cột không tồn tại
+    }
 
 } catch(PDOException $e) {
     die("Lỗi tạo bảng: " . $e->getMessage());
