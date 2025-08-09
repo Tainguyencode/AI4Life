@@ -11,7 +11,7 @@ if (!isLoggedIn()) {
 }
 
 $user = getCurrentUser();
-$apiKey = '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';
+$apiKey = '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';
 
 // Xử lý form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

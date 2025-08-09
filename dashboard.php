@@ -78,7 +78,7 @@ $stats = getProfileStats($user['id']);
         </div>
 
         <!-- Quick Actions -->
-        <div class="grid md:grid-cols-4 gap-6 mb-8">
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
             <div class="bg-white rounded-lg shadow-md p-6">
                 <div class="flex items-center mb-4">
                     <i class="fas fa-user-edit text-blue-600 text-2xl mr-3"></i>
@@ -111,6 +111,28 @@ $stats = getProfileStats($user['id']);
                     <i class="fas fa-clock mr-2"></i>Xem lịch sử
                 </a>
             </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <i class="fas fa-road text-purple-600 text-2xl mr-3"></i>
+                <h3 class="text-xl font-bold text-gray-800">Lộ trình học tập</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Quản lý các lộ trình học tập đã tạo</p>
+            <a href="manage-roadmaps.php" class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors inline-block">
+                <i class="fas fa-road mr-2"></i>Quản lý
+            </a>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-center mb-4">
+                <i class="fas fa-chart-pie text-pink-600 text-2xl mr-3"></i>
+                <h3 class="text-xl font-bold text-gray-800">Infographic</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Xem infographic tư vấn ngành học</p>
+            <a href="my-profiles.php" class="bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition-colors inline-block">
+                <i class="fas fa-chart-pie mr-2"></i>Xem infographic
+            </a>
+        </div>
 
             <div class="bg-white rounded-lg shadow-md p-6">
                 <div class="flex items-center mb-4">

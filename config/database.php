@@ -71,6 +71,21 @@ CREATE TABLE IF NOT EXISTS ai_recommendations (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ";
 
+// Tạo bảng ai_learning_roadmaps để lưu lộ trình học tập từ AI
+$createAILearningRoadmapsTable = "
+CREATE TABLE IF NOT EXISTS ai_learning_roadmaps (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    profile_id INT NOT NULL,
+    major_name VARCHAR(255) NOT NULL,
+    roadmap_data JSON NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (profile_id) REFERENCES student_profiles(id) ON DELETE CASCADE,
+    UNIQUE KEY unique_user_major (user_id, profile_id, major_name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+";
+
 try {
     // Tạo bảng users
     $pdo->exec($createUsersTable);
@@ -80,6 +95,9 @@ try {
     
     // Tạo bảng ai_recommendations
     $pdo->exec($createAIRecommendationsTable);
+    
+    // Tạo bảng ai_learning_roadmaps
+    $pdo->exec($createAILearningRoadmapsTable);
 
 } catch(PDOException $e) {
     die("Lỗi tạo bảng: " . $e->getMessage());

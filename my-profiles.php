@@ -3,6 +3,7 @@ session_start();
 require_once 'config/database.php';
 require_once 'includes/functions.php';
 
+
 // Kiểm tra đăng nhập
 if (!isLoggedIn()) {
     header('Location: index.php');
@@ -20,6 +21,8 @@ if (isset($_POST['delete_profile']) && isset($_POST['profile_id'])) {
         redirectWithMessage('my-profiles.php', 'Có lỗi xảy ra khi xóa!', 'error');
     }
 }
+
+
 
 // Lấy thống kê
 $stats = getProfileStats($user['id']);
@@ -80,6 +83,8 @@ $profiles = getAllStudentProfiles($user['id']);
         endif; 
         ?>
 
+
+
         <!-- Thống kê -->
         <div class="grid md:grid-cols-3 gap-6 mb-8">
             <div class="bg-white rounded-lg shadow-md p-6 text-center">
@@ -130,6 +135,11 @@ $profiles = getAllStudentProfiles($user['id']);
                            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
                             <i class="fas fa-eye mr-2"></i>Xem chi tiết
                         </a>
+                        <a href="infographic.php?id=<?php echo $profile['id']; ?>" 
+                           class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
+                            <i class="fas fa-chart-pie mr-2"></i>Infographic
+                        </a>
+                        
                         <form method="POST" class="inline" onsubmit="return confirm('Bạn có chắc muốn xóa profile này?')">
                             <input type="hidden" name="profile_id" value="<?php echo $profile['id']; ?>">
                             <button type="submit" name="delete_profile" 
@@ -192,6 +202,8 @@ $profiles = getAllStudentProfiles($user['id']);
                 alert.style.display = 'none';
             });
         }, 5000);
+        
+
     </script>
 </body>
 </html>
